@@ -66,45 +66,104 @@ char **_realocdp(char **point, unsigned int prevs_size, unsigned int nw_size);
 
 
 /* aux_str2.c */
+
+/**"char *_strdup(const char *s);"*/
 char *_stringdup(const char *string);
+
+/**"int _strlen(const char *s);"*/
 int _stringlen(const char *string);
+
+/**"int cmp_chars(char str[], const char *delim);"*/
 int compare_chars(char string[], const char *delim);
+
+/**"*char_strtok(char str[], const char *delim);"*/
 char *_stringtok(char string[], const char *delim);
+
+/**"int _isdigit(const char *s);"*/
 int _isdigit(const char *string);
+
 /**End of aux_str2.c*/
 
 /* aux_str3.c */
+
+/**"void rev_string(char *s);"*/
 void reverse_string(char *string);
 
-/**I stopped here*/
+/**End of aux_str3.c*/
 
 
 /* check_syntax_error.c */
-int repeated_char(char *input, int i);
-int error_sep_op(char *input, int i, char last);
-int first_char(char *input, int *i);
-void print_syntax_error(data_shell *datash, char *input, int i, int bool);
-int check_syntax_error(data_shell *datash, char *input);
+
+/**"int repeated_char(char *input, int i);"*/
+int rpted_char(char *ipt, int a);
+
+/**"int error_sep_op(char *input, int i, char last);"*/
+int err_div_op(char *ipt, int a, char last);
+
+/**"int first_char(char *input, int *i);"*/
+int fest_char(char *ipt, int *a);
+
+/**"void print_syntax_error(data_shell *datash, char *input, int i, int bool);"*/
+void pint_syn_err(data_shell *datash, char *inputs, int a, int bool);
+
+/**"int check_syntax_error(data_shell *datash, char *input);"*/
+int check_syn_err(data_shell *datash, char *inputs);
+
+/**End check syntax error.c*/
+
 
 /* shell_loop.c */
+
+/**"char *without_comment(char *in);"*/
 char *without_comment(char *in);
+
+/**"void shell_loop(data_shell *datash);"*/
 void shell_loop(data_shell *datash);
 
+/**End of shell_loop.c**/
+
+
 /* read_line.c */
-char *read_line(int *i_eof);
+/**"*read_line(int *i_eof);"*/
+char *rd_ln(int *i_eof);
+
+/**End read_line.c*/
+
 
 /* split.c */
-char *swap_char(char *input, int bool);
-void add_nodes(sep_list **head_s, line_list **head_l, char *input);
-void go_next(sep_list **list_s, line_list **list_l, data_shell *datash);
-int split_commands(data_shell *datash, char *input);
-char **split_line(char *input);
+
+/**"char *swap_char(char *input, int bool);"*/
+char *swp_cha(char *ipt, int bool);
+
+/**"void add_nodes(sep_list **head_s, line_list **head_l, char *input);"*/
+void add_node(sep_list **head_s, line_list **head_l, char *inputs);
+
+/**"void go_next(sep_list **list_s, line_list **list_l, data_shell *datash);"*/
+void pull_nxt(sep_list **list_s, line_list **list_l, data_shell *datash);
+
+/**"int split_commands(data_shell *datash, char *input);"*/
+int divide_cmds(data_shell *datash, char *input);
+
+/**"char **split_line(char *input);"*/
+char **line_split(char *inputs);
+
+/**End of split.c*/
+
 
 /* rep_var.c */
-void check_env(r_var **h, char *in, data_shell *data);
-int check_vars(r_var **h, char *in, char *st, data_shell *data);
-char *replaced_input(r_var **head, char *input, char *new_input, int nlen);
-char *rep_var(char *input, data_shell *datash);
+
+/**"void check_env(r_var **h, char *in, data_shell *data);"*/
+void chck_environ(r_var **h, char *in, data_shell *data);
+
+
+/**"int check_vars(r_var **h, char *in, char *st, data_shell *data);"*/
+int chck_variable(r_var **h, char *in, char *st, data_shell *data);
+
+/**"char *replaced_input(r_var **head, char *input, char *new_input, int nlen);"*/
+char *rpced_inputs(r_var **head, char *input, char *new_input, int nlen);
+
+/**"char *rep_var(char *input, data_shell *datash);"*/
+char *rep_variable(char *inputs, data_shell *datash);
 
 /* get_line.c */
 void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);
@@ -186,3 +245,12 @@ void aux_help_cd(void);
 int get_help(data_shell *datash);
 
 #endif
+#ifndef SECONDHEADER_H
+#define SECONDHEADER_H
+
+/**inluding the header directive "header.h"*/
+#include "header.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/types.h>
