@@ -165,53 +165,110 @@ char *rpced_inputs(r_var **head, char *input, char *new_input, int nlen);
 /**"char *rep_var(char *input, data_shell *datash);"*/
 char *rep_variable(char *inputs, data_shell *datash);
 
+/**End rep_var.c*/
+
+
 /* get_line.c */
-void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);
-ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
+
+/**"void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);"*/
+void get_line(char **lnptr, size_t *n, char *buffer, size_t a);
+
+/**"ssize_t get_line(char **lineptr, size_t *n, FILE *stream);"*/
+ssize_t get_line(char **lnptr, size_t *n, FILE *streaming);
 
 /* exec_line */
-int exec_line(data_shell *datash);
+
+/**"int exec_line(data_shell *datash);"*/
+int execute_ln(data_shell *datash);
 
 /* cmd_exec.c */
-int is_cdir(char *path, int *i);
-char *_which(char *cmd, char **_environ);
-int is_executable(data_shell *datash);
-int check_error_cmd(char *dir, data_shell *datash);
-int cmd_exec(data_shell *datash);
+
+/**"int is_cdir(char *path, int *i);"*/
+int is_cdirectory(char *pat, int *i);
+
+/**"char *_which(char *cmd, char **_environ);"*/
+char *_whch(char *cmd, char **_environment);
+
+/**"int is_executable(data_shell *datash);"*/
+int is_execute(data_shell *datash);
+
+/**"int check_error_cmd(char *dir, data_shell *datash);"*/
+int chck_err_cmd(char *dir, data_shell *datash);
+
+/**"int cmd_exec(data_shell *datash);"*/
+int cmd_execute(data_shell *datash);
 
 /* env1.c */
-char *_getenv(const char *name, char **_environ);
+
+/**"char *_getenv(const char *name, char **_environ);"*/
+char *_gtenv(const char *name, char **_environment);
+
+/**"int _env(data_shell *datash);"*/
 int _env(data_shell *datash);
 
 /* env2.c */
-char *copy_info(char *name, char *value);
-void set_env(char *name, char *value, data_shell *datash);
-int _setenv(data_shell *datash);
-int _unsetenv(data_shell *datash);
+
+/**"char *copy_info(char *name, char *value);"*/
+char *copy_info(char *name, char *val);
+
+/**"void set_env(char *name, char *value, data_shell *datash);"*/
+void st_env(char *name, char *val, data_shell *datash);
+
+/**"int _setenv(data_shell *datash);"*/
+int _stenv(data_shell *datash);
+
+/**"int _unsetenv(data_shell *datash);"*/
+int _unstenv(data_shell *datash);
 
 /* cd.c */
-void cd_dot(data_shell *datash);
-void cd_to(data_shell *datash);
-void cd_previous(data_shell *datash);
-void cd_to_home(data_shell *datash);
+
+/**"void cd_dot(data_shell *datash);"*/
+void cd_dt(data_shell *datash);
+
+/**"void cd_to(data_shell *datash);"*/
+void cd_to_this(data_shell *datash);
+
+/**"void cd_previous(data_shell *datash);"*/
+void cd_before(data_shell *datash);
+
+/**"void cd_to_home(data_shell *datash);"*/
+void cd_to_origin(data_shell *datash);
 
 /* cd_shell.c */
+
+/**"int cd_shell(data_shell *datash);"*/
 int cd_shell(data_shell *datash);
 
 /* get_builtin */
+
+/**"int (*get_builtOOBin(char *cmd))(data_shell *datash);"*/
 int (*get_builtOOBin(char *cmd))(data_shell *datash);
 
 /* _exit.c */
-int exit_shell(data_shell *datash);
+
+/**"int exit_shell(data_shell *datash);"*/
+int exit_theshell(data_shell *datash);
 
 /* aux_stdlib.c */
-int get_len(int n);
-char *aux_itoa(int n);
+
+/**"int get_len(int n);"*/
+int get_length(int n);
+
+/**"char *aux_itoa(int n);"*/
+char *aux_fromitoa(int b);
+
+/**"int _atoi(char *s);"*/
 int _atoi(char *s);
 
 /* aux_error1.c */
-char *strcat_cd(data_shell *, char *, char *, char *);
+
+/**"char *strcat_cd(data_shell *, char *, char *, char *);"*/
+char *strconcat_cd(data_shell *, char *, char *, char *);
+
+/**"char *error_get_cd(data_shell *datash);"*/
 char *error_get_cd(data_shell *datash);
+
+/**""*/
 char *error_not_found(data_shell *datash);
 char *error_exit_shell(data_shell *datash);
 
