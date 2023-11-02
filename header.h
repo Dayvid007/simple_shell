@@ -1,6 +1,6 @@
-/**initially "MAIN_H" BEFORE CHANGED TO "HEADER_H" */
 #ifndef HEADER_H
 #define HEADER_H
+/**initially "MAIN_H" BEFORE CHANGED TO "HEADER_H" */
 
 /** Another header file */
 #include "secondheader.h"
@@ -33,18 +33,18 @@ extern char **environment;
 
 typedef struct data
 {
-        char **av;
+	char **av;
 
-        /**initially variable ["input"] before changed to variable["inputs"] */
-        char *inputs;
-        char **args;
-        /**initially variable["*status"] before chabged to ["position"] */
-        int position;
-        /**initially variable ["counter"] before changed to ["measure"] */
-        int measure;
-        /**initially variiable ["**_environ"] before changed to ["**_environment"] */
-        char **_environment;
-        char *pid;
+	/**initially variable ["input"] before changed to variable["inputs"] */
+	char *inputs;
+	char **args;
+	/**initially variable["*status"] before chabged to ["position"] */
+	int position;
+	/**initially variable ["counter"] before changed to ["measure"] */
+	int measure;
+	/**initially variiable ["**_environ"] before changed to ["**_environment"] */
+	char **_environment;
+	char *pid;
 } data_shell;
 
 /**
@@ -56,23 +56,23 @@ typedef struct data
 
 typedef struct sep_list_s
 {
-        /**initially "seperator" before changed to "divider" */
-        char divider;
-        struct sep_list_s *next;
+	/**initially "seperator" before changed to "divider" */
+	char divider;
+	struct sep_list_s *next;
 } sep_list;
 
 /**
  * struct line_list_s - single linked list
- * @staright_line: command line
+ * @straight_line: command line
  * @next: next node
  * Description: single linked list to store command lines
  */
 
 typedef struct line_list_s
 {
-        /**initially "line" before changed to "straight_line"*/
-        char *straight_line;
-        struct line_list_s *next;
+	/**initially "line" before changed to "straight_line"*/
+	char *straight_line;
+	struct line_list_s *next;
 } line_list;
 
 /**
@@ -86,15 +86,15 @@ typedef struct line_list_s
 
 typedef struct r_var_list
 {
-        /**initially "len_var" before changed to "variable_length"*/
-        int variable_length;
+	/**initially "len_var" before changed to "variable_length"*/
+	int variable_length;
 
-        /**initially "*val" before changed to "*value"*/
-        char *value;
+	/**initially "*val" before changed to "*value"*/
+	char *value;
 
-        /**initially "len_val" before changed to "value_length" */
-        int value_length;
-        struct r_var_list *next;
+	/**initially "len_val" before changed to "value_length" */
+	int value_length;
+	struct r_var_list *next;
 } r_var;
 
 /**
@@ -105,9 +105,9 @@ typedef struct r_var_list
 
 typedef struct builtin_s
 {
-        /**initially "*name" before changed to "*cmd_name"*/
-        char *cmd_name;
-        int (*f)(data_shell *datash);
+	/**initially "*name" before changed to "*cmd_name"*/
+	char *cmd_name;
+	int (*f)(data_shell *datash);
 } builtin_t;
 
 #endif
