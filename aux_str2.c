@@ -1,4 +1,5 @@
-#include "main.h"
+#include "header.h"
+#include "secondheader.h"
 
 /**
  * _stringdup - A program that duplicates a str in the heap memory.
