@@ -103,7 +103,7 @@ int err_div_op(char *ipt, int a, char last);
 /**"int first_char(char *input, int *i);"*/
 int fest_char(char *ipt, int *a);
 
-/**"void print_syntax_error(data_shell *datash, char *input, int i, int bool);"*/
+/**"void print_syntax_error(data_shell*datash,char *input,int i, int bool);"*/
 void pint_syn_err(data_shell *datash, char *inputs, int a, int bool);
 
 /**"int check_syntax_error(data_shell *datash, char *input);"*/
@@ -159,7 +159,7 @@ void chck_environ(r_var **h, char *in, data_shell *data);
 /**"int check_vars(r_var **h, char *in, char *st, data_shell *data);"*/
 int chck_variable(r_var **h, char *in, char *st, data_shell *data);
 
-/**"char *replaced_input(r_var **head, char *input, char *new_input, int nlen);"*/
+/**"char*replaced_input(r_var **head,char *input,char *new_input, intnlen);"*/
 char *rpced_inputs(r_var **head, char *input, char *new_input, int nlen);
 
 /**"char *rep_var(char *input, data_shell *datash);"*/
@@ -266,48 +266,55 @@ int _atoi(char *s);
 char *strconcat_cd(data_shell *, char *, char *, char *);
 
 /**"char *error_get_cd(data_shell *datash);"*/
-char *error_get_cd(data_shell *datash);
+char *err_gt_cd(data_shell *datash);
 
-/**""*/
-char *error_not_found(data_shell *datash);
-char *error_exit_shell(data_shell *datash);
+/**"char *error_not_found(data_shell *datash);" */
+char *err_absent(data_shell *datash);
+/**"error_exit_shell(data_shell *datash)"*/
+char *err_depart_shell(data_shell *datash);
 
 /* aux_error2.c */
-char *error_get_alias(char **args);
-char *error_env(data_shell *datash);
-char *error_syntax(char **args);
-char *error_permission(char **args);
-char *error_path_126(data_shell *datash);
+/**"char *error_get_alias(char **args)"*/
+char *err_gt_alter(char **args);
+/**"char *error_env(data_shell *datash);*/
+char *err_environ(data_shell *datash);
+/**"char *error_syntax(char **args);"*/
+char *err_syn(char **args);
+/**"char *error_permission(char **args);"*/
+char *err_permit(char **args);
+/**"char *error_path_126(data_shell *datash);"*/
+char *err_pt_126(data_shell *datash);
 
 
 /* get_error.c */
-int get_error(data_shell *datash, int eval);
+/**"int get_error(data_shell *datash, int eval);"*/
+int gt_err(data_shell *datash, int evaluate);
 
 /* get_sigint.c */
-void get_sigint(int sig);
+/**"void get_signint(int sig);"*/
+void gt_signedinnt(int sigma);
 
 /* aux_help.c */
-void aux_help_env(void);
-void aux_help_setenv(void);
-void aux_help_unsetenv(void);
-void aux_help_general(void);
-void aux_help_exit(void);
+/**"void aux_help_env(void);"*/
+void ax_assist_envir(void);
+/**"void aux_help_setenv(void)"*/
+void ax_assist_setenver(void);
+/**"void aux_help_unsetenv(void)"*/
+void ax_assist_unsetenver(void);
+/**"void aux_help_general(void);*/
+void ax_assist_gen(void);
+/**"void aux_help_exit(void);"*/
+void ax_assist_depart(void);
 
 /* aux_help2.c */
-void aux_help(void);
-void aux_help_alias(void);
-void aux_help_cd(void);
+/**"void aux_help(void)"*/
+void ax_assist(void);
+/**"void aux_help_alias(void);"*/
+void ax_assist_alias(void);
+/**"void aux_help_cd(void);"*/
+void ax_assist_cdir(void);
 
 /* get_help.c */
-int get_help(data_shell *datash);
-
+/**"int get_help(data_shell *datash);"*/
+int gt_assist(data_shell *datash);
 #endif
-#ifndef SECONDHEADER_H
-#define SECONDHEADER_H
-
-/**inluding the header directive "header.h"*/
-#include "header.h"
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <sys/types.h>

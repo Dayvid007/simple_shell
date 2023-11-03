@@ -266,40 +266,40 @@ int _atoi(char *s);
 char *strconcat_cd(data_shell *, char *, char *, char *);
 
 /**"char *error_get_cd(data_shell *datash);"*/
-char *err_gt_cd(data_shell *datash);
+char *error_get_cd(data_shell *datash);
 
-
-char *err_absent(data_shell *datash);/* formerly "char *error_not_found(data_shell *datash);" */
-char *err_depart_shell(data_shell *datash);/*formerly "error_exit_shell(data_shell *datash)"*/
+/**""*/
+char *error_not_found(data_shell *datash);
+char *error_exit_shell(data_shell *datash);
 
 /* aux_error2.c */
-char *err_gt_alter(char **args);/* formerly "char *error_get_alias(char **args)" */
-char *err_environ(data_shell *datash); /* formerly "char *error_env(data_shell *datash); */
-char *err_syn(char **args);  /* formerly "char *error_syntax(char **args); */
-char *err_permit(char **args); /* formerly "char *error_permission(char **args);" */
-char *err_pt_126(data_shell *datash); /* formerly "char *error_path_126(data_shell *datash);" */
+char *error_get_alias(char **args);
+char *error_env(data_shell *datash);
+char *error_syntax(char **args);
+char *error_permission(char **args);
+char *error_path_126(data_shell *datash);
 
 
 /* get_error.c */
-int gt_err(data_shell *datash, int evaluate); /* formerly "get_error(data_shell *datash, int eval);" */
+int get_error(data_shell *datash, int eval);
 
 /* get_sigint.c */
-void gt_signedinnt(int sigma);/* formerly "void get_signint(int sig);" */
+void get_sigint(int sig);
 
 /* aux_help.c */
-void ax_assist_envir(void); /*formerly "void aux_help_env(void);" */
-void ax_assist_setenver(void);/*formerly "void aux_help_setenv(void);" */
-void ax_assist_unsetenver(void);/*formerly "void aux_help_unsetenv(void);" */
-void ax_assist_gen(void);/*formerly "void aux_help_general(void);" */
-void ax_assist_depart(void);/*formerly "void aux_help_exit(void);" */
+void aux_help_env(void);
+void aux_help_setenv(void);
+void aux_help_unsetenv(void);
+void aux_help_general(void);
+void aux_help_exit(void);
 
 /* aux_help2.c */
-void ax_assist(void); /* formerly "void aux_help(void);" */
-void ax_assist_alias(void);/* formerly "void aux_help_alias(void);" */
-void ax_assist_cdir(void);/* formerly "void aux_help_cd(void);" */
+void aux_help(void);
+void aux_help_alias(void);
+void aux_help_cd(void);
 
 /* get_help.c */
-int gt_assist(data_shell *datash);/* formerly " int get_help(data_shell *datash); */
+int get_help(data_shell *datash);
 
 #endif
 #ifndef SECONDHEADER_H
