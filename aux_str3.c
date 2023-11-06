@@ -1,4 +1,3 @@
-#include "header.h"
 #include "secondheader.h"
 
 /**
@@ -14,7 +13,7 @@ void reverse_string(char *string)
 
 	while (count >= 0)
 	{
-		if (s[count] == '\0')
+		if (string[count] == '\0')
 			break;
 		count++;
 	}

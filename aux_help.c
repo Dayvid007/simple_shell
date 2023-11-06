@@ -1,4 +1,3 @@
-#include "header.h"
 #include "secondheader.h"
 
 /**

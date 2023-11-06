@@ -2,9 +2,6 @@
 #define HEADER_H
 /**initially "MAIN_H" BEFORE CHANGED TO "HEADER_H" */
 
-/** Another header file */
-#include "secondheader.h"
-
 /**initially "BUFFSIZE" before changed to "TOTALSIZE" */
 #define TOTALSIZE 1024
 

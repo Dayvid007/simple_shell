@@ -1,7 +1,6 @@
 #ifndef SECONDHEADER_H
 #define SECONDHEADER_H
 
-/**inluding the header directive "header.h"*/
 #include "header.h"
 #include <stdio.h>
 #include <unistd.h>
@@ -171,7 +170,7 @@ char *rep_variable(char *inputs, data_shell *datash);
 /* get_line.c */
 
 /**"void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);"*/
-void get_line(char **lnptr, size_t *n, char *buffer, size_t a);
+void gt_line(char **lnptr, size_t *n, char *buffer, size_t a);
 
 /**"ssize_t get_line(char **lineptr, size_t *n, FILE *stream);"*/
 ssize_t get_line(char **lnptr, size_t *n, FILE *streaming);

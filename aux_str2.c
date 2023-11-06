@@ -1,4 +1,3 @@
-#include "header.h"
 #include "secondheader.h"
 
 /**
@@ -12,7 +11,7 @@ char *_stringdup(const char *string)
 	char *new_mem;
 	size_t length;
 
-	length = _stringlen(s);
+	length = _stringlen(string);
 	new_mem = malloc(sizeof(char) * (length + 1));
 	if (new_mem == NULL)
 		return (NULL);
@@ -29,7 +28,7 @@ int _stringlen(const char *string)
 {
 	int length;
 
-	for (length = 0; s[length] != 0; length++)
+	for (length = 0; string[length] != 0; length++)
 	{
 	}
 	return (length);
@@ -47,11 +46,11 @@ int compare_chars(char string[], const char *delim)
 {
 	unsigned int a, b, c;
 
-	for (a = 0, c = 0; str[a]; a++)
+	for (a = 0, c = 0; string[a]; a++)
 	{
 		for (b = 0; delim[b]; b++)
 		{
-			if (str[a] == delim[b])
+			if (string[a] == delim[b])
 			{
 				c++;
 				break;
