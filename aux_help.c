@@ -86,7 +86,7 @@ void aux_assist_depart(void)
 	char *gvhelp = "exit: exit [n]\n Exit shell.\n";
 
 	write(STDOUT_FILENO, gvhelp, _stringlen(gvhelp));
-	help = "Exits the shell with a status of N. If N is ommited, the exit";
+	gvhelp = "Exits the shell with a status of N. If N is ommited, the exit";
 	write(STDOUT_FILENO, gvhelp, _stringlen(gvhelp));
 	gvhelp = "statusis that of the last command executed\n";
 	write(STDOUT_FILENO, gvhelp, _stringlen(gvhelp));

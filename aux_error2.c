@@ -14,11 +14,11 @@ char *err_environ(data_shell *datash)
 	char *ver_string;
 	char *message;
 
-	ver_string = aux_fromitoa(datash->counter);
+	ver_string = aux_fromitoa(datash->measure);
 	message = ": Unable to add/remove from environment\n";
 	getlength = _stringlen(datash->av[0]) + _stringlen(ver_string);
 	getlength += _stringlen(datash->args[0]) + _stringlen(message) + 4;
-	printerror = malloc(sizeof(char) * (length + 1));
+	printerror = malloc(sizeof(char) * (getlength + 1));
 
 	if (printerror == 0)
 	{
@@ -49,18 +49,18 @@ char *err_environ(data_shell *datash)
 
 char *err_pt_126(data_shell *datash)
 {
-	int gtlength;
+	int getlength;
 	char *ver_string;
 	char *printerror;
 
-	ver_string = aux_fromitoa(datash->counter);
-	length = _strlen(datash->av[0]) + _strlen(ver_str);
-	length += _strlen(datash->args[0]) + 24;
-	error = malloc(sizeof(char) * (length + 1));
-	if (error == 0)
+	ver_string = aux_fromitoa(datash->measure);
+	getlength = _stringlen(datash->av[0]) + _stringlen(ver_string);
+	getlength += _stringlen(datash->args[0]) + 24;
+	printerror = malloc(sizeof(char) * (getlength + 1));
+	if (printerror == 0)
 	{
-		free(error);
-		free(ver_str);
+		free(printerror);
+		free(ver_string);
 		return (NULL);
 	}
 	_stringcpy(printerror, datash->av[0]);
