@@ -111,12 +111,12 @@ char *err_absent(data_shell *datash)
 }
 
 /**
- * error_depart_shell - generic error message for exit in get_exit
+ * err_depart_shell - generic error message for exit in get_exit
  * @datash: data relevant (counter, arguments)
  *
  * Return: Error message
  */
-char *error_depart_shell(data_shell *datash)
+char *err_depart_shell(data_shell *datash)
 {
 	int len1;
 	char *err;
