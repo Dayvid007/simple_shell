@@ -17,12 +17,12 @@ void ax_assist_envir(void)
 }
 
 /**
- * aux_assist_setenver - A program that helps
+ * ax_assist_setenver - A program that helps
  * information for the builtin setenv
  * Return: no return
  */
 
-void aux_assist_setenver(void)
+void ax_assist_setenver(void)
 {
 
 	char *gvhelp = "setenv: setenv (const char *name, const char *value,";
@@ -35,12 +35,12 @@ void aux_assist_setenver(void)
 }
 
 /**
- * aux_assist_unsetenver - This program helps
+ * ax_assist_unsetenver - This program helps
  * information for the builtin unsetenv
  * Return: no return
  */
 
-void aux_assist_unsetenver(void)
+void ax_assist_unsetenver(void)
 {
 	char *gvhelp = "unsetenv: unsetenv (const char *name)\n\t";
 
@@ -50,12 +50,12 @@ void aux_assist_unsetenver(void)
 }
 
 /**
- * aux_assist_gen - Entry point for help
+ * ax_assist_gen - Entry point for help
  * information for the help builtin
  * Return: no return
  */
 
-void aux_assist_gen(void)
+void ax_assist_gen(void)
 {
 	char *gvhelp = "^-^ bash, version 1.0(1)-release\n";
 
@@ -75,12 +75,12 @@ void aux_assist_gen(void)
 }
 
 /**
- * aux_assist_depart - This proograms helps
+ * ax_assist_depart - This proograms helps
  * information fot the builint exit
  * Return: no return
  */
 
-void aux_assist_depart(void)
+void ax_assist_depart(void)
 {
 	char *gvhelp = "exit: exit [n]\n Exit shell.\n";
 
