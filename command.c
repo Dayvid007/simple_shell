@@ -141,7 +141,7 @@ void cd_to_origin(data_shell *datash)
 
 	getcwd(printwd, sizeof(printwd));
 	p_printwd = _stringdup(printwd);
-       
+
 	origin = _gtenv("HOME", datash->_environment);
 
 	if (origin == NULL)

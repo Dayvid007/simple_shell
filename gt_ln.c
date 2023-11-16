@@ -86,7 +86,7 @@ ssize_t get_line(char **lnptr, size_t *n, FILE *streaming)
 			break;
 		}
 		if (inputs >= TOTALSIZE)
-			buffering= _reallocate(buffering, inputs, inputs + 1);
+			buffering = _reallocate(buffering, inputs, inputs + 1);
 		buffering[inputs] = letter;
 		inputs++;
 	}

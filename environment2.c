@@ -52,7 +52,8 @@ void st_env(char *name, char *val, data_shell *datash)
 		free(vary_environ);
 	}
 
-	datash->_environment = _realocdp(datash->_environment, j, sizeof(char *) * (j + 2));
+	datash->_environment = _realocdp(datash->_environment, j,
+			sizeof(char *) * (j + 2));
 	datash->_environment[j] = copy_info(name, val);
 	datash->_environment[j + 1] = NULL;
 }

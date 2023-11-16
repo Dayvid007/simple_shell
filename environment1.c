@@ -11,14 +11,14 @@
 int chr_environ_name(const char *nameenv, const char *str_name)
 {
 	int a = 0;
-	
+
 	while (nameenv[a] != '=')
 	{
-	if (nameenv[a] != str_name[a])
-	{
-        return 0;
-    	}
-    	a++;
+		if (nameenv[a] != str_name[a])
+		{
+			return (0);
+		}
+		a++;
 	}
 	return (a + 1);
 }
