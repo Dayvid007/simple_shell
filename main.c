@@ -39,14 +39,14 @@ void apply_data(data_shell *datash, char **av)
 	datash->position = 0;
 	datash->measure = 1;
 
-	for (a = 0; environment[a]; a++)
+	for (a = 0; environ[a]; a++)
 		;
 
 	datash->_environment = malloc(sizeof(char *) * (a + 1));
 
-	for (a = 0; environment[a]; a++)
+	for (a = 0; environ[a]; a++)
 	{
-		datash->_environment[a] = _stringdup(environment[a]);
+		datash->_environment[a] = _stringdup(environ[a]);
 	}
 
 	datash->_environment[a] = NULL;

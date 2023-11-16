@@ -12,9 +12,7 @@
 #define KOT_MILED " \t\r\n\a"
 
 /* This points to an array of pointers to strings called the "environment" */
-
-/** initially ["**environ"] before changed to ["**environment"] */
-extern char **environment;
+extern char **environ;
 
 
 /**
